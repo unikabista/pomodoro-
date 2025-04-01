@@ -105,13 +105,6 @@ main {
   line-height: 1.4;
 }
 
-.subtitle {
-  font-size: 1.1rem;
-  margin-bottom: 2rem;
-  line-height: 1.6;
-  color: #ccc;
-}
-
 .timer-input-container {
   margin-bottom: 2rem;
   display: flex;
@@ -188,9 +181,9 @@ main {
 .timer-pointer {
   position: absolute;
   width: 4px;
-  height: 100px;
+  height: 95px;
   background: #ff5e62;
-  top: 40px; /* moves pointer up near the top */
+  top: 45px; /* moves pointer up near the top */
   left: 50%;
   transform: translateX(-50%) rotate(0deg);
   transform-origin: bottom center;
@@ -266,4 +259,121 @@ footer {
   padding: 0.5rem;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   font-size: 0.95rem;
+}
+
+/* Styling for the About Pomodoro Section */
+.about-pomodoro {
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.1
+  ); /* Subtle background for contrast */
+  padding: 60px 20px;
+  margin-top: 60px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Add a soft shadow */
+  color: #fff; /* Ensure text is readable */
+  text-align: center; /* Center-align content for better readability */
+}
+
+.about-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.about-pomodoro h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #ff9966; /* Highlight headings with a warm color */
+}
+
+.about-pomodoro p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 30px;
+  color: #ddd; /* Softer text color for readability */
+}
+
+.about-pomodoro ol,
+.about-pomodoro ul {
+  margin-left: 20px;
+  margin-bottom: 30px;
+  text-align: left; /* Align lists to the left for better readability */
+}
+
+.about-pomodoro li {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 10px;
+  color: #ddd;
+}
+
+.about-pomodoro strong {
+  color: #ff9966; /* Highlight important text */
+}
+
+/* Add spacing between sections */
+.about-pomodoro h2:not(:first-child) {
+  margin-top: 40px;
+}
+
+/* Smooth scrolling for better user experience */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Timer Mode Buttons */
+.timer-mode-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.mode-btn {
+  background: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+  padding: 0.6rem 1.5rem;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.mode-btn.active {
+  background: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+  padding: 0.6rem 1.5rem;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.mode-btn:hover {
+  background: linear-gradient(to right, #ff5e62, #ff9966);
+  color: #fff;
+  border-color: orangered;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .about-pomodoro {
+    padding: 30px 15px;
+  }
+
+  .about-pomodoro h2 {
+    font-size: 1.6rem;
+  }
+
+  .about-pomodoro p,
+  .about-pomodoro li {
+    font-size: 0.95rem;
+  }
 }
