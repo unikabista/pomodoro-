@@ -188,7 +188,7 @@ main {
 .timer-pointer {
   position: absolute;
   width: 4px;
-  height: 30px;
+  height: 100px;
   background: #ff5e62;
   top: 40px; /* moves pointer up near the top */
   left: 50%;
