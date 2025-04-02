@@ -1,95 +1,103 @@
 /* General Styles */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-  }
-  
-  .login-container {
-    background: #ffffff;
-    padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 400px;
-  }
-  
-  h2 {
-    text-align: center;
-    color: #333;
-    margin-bottom: 1rem;
-  }
-  
-  label {
-    display: block;
-    margin-bottom: 0.5rem;
-    font-weight: bold;
-    color: #555;
-  }
-  
-  input {
-    width: 100%;
-    padding: 0.8rem;
-    margin-bottom: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 1rem;
-  }
-  
-  input:focus {
-    border-color: #007bff;
-    outline: none;
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
-  }
-  
-  button {
-    width: 100%;
-    padding: 0.8rem;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  button:hover {
-    background-color: #0056b3;
-  }
-  
-  .register-prompt {
-    text-align: center;
-    margin-top: 1rem;
-    font-size: 0.9rem;
-  }
-  
-  .register-prompt a {
-    color: #007bff;
-    text-decoration: none;
-  }
-  
-  .register-prompt a:hover {
-    text-decoration: underline;
-  }
+  font-family: Arial, sans-serif;
+  background-color: #3a6073; /* Match the Pomodoro app's background */
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
 
-  .google-signin-btn {
-    width: 100%;
-    padding: 0.8rem;
-    background-color: #4285f4;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    font-size: 1rem;
-    cursor: pointer;
-    margin-top: 1rem;
-  }
-  
-  .google-signin-btn:hover {
-    background-color: #357ae8;
-  }
+.login-container {
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Slightly stronger shadow for consistency */
+  width: 100%;
+  max-width: 400px;
+}
+
+h2 {
+  text-align: center;
+  color: #ff5e62; /* Use the Pomodoro app's primary color */
+  margin-bottom: 1rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  color: rgb(60, 59, 59); /* Softer text color for readability */
+}
+
+input {
+  width: 100%;
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  background-color: #f4f4f9; /* Light background for inputs */
+  color: #333; /* Darker text for contrast */
+}
+
+input:focus {
+  border-color: #ff5e62; /* Match the Pomodoro app's primary color */
+  outline: none;
+  box-shadow: 0 0 5px rgba(255, 94, 98, 0.5); /* Add a subtle glow effect */
+}
+
+button {
+  width: 100%;
+  padding: 0.8rem;
+  background: linear-gradient(
+    to right,
+    #ff5e62,
+    #ff9966
+  ); /* Gradient from the Pomodoro app */
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  transform: translateY(-2px); /* Slight lift effect */
+  opacity: 0.9;
+}
+
+.register-prompt {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #ddd; /* Softer text color */
+}
+
+.register-prompt a {
+  color: #ff9966; /* Use the secondary color from the Pomodoro app */
+  text-decoration: none;
+}
+
+.register-prompt a:hover {
+  text-decoration: underline;
+}
+
+.google-signin-btn {
+  width: 100%;
+  padding: 0.8rem;
+  background-color: #4285f4; /* Keep Google's branding color */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+.google-signin-btn:hover {
+  background-color: #357ae8;
+}

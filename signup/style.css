@@ -1,7 +1,7 @@
 /* General Styles */
 body {
   font-family: Arial, sans-serif;
-  background-color: #f4f4f9; /* Matches the landing page background */
+  background-color: #3a6073; /* Match the Pomodoro app's background */
   margin: 0;
   padding: 0;
   display: flex;
@@ -10,18 +10,18 @@ body {
   height: 100vh;
 }
 
-.signup-container {
-  background: #ffffff; /* White background for the form card */
+.login-container {
+  background: #ffffff;
   padding: 2rem;
   border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Slightly stronger shadow for consistency */
   width: 100%;
   max-width: 400px;
 }
 
 h2 {
   text-align: center;
-  color: #333; /* Dark text for contrast */
+  color: #ff5e62; /* Use the Pomodoro app's primary color */
   margin-bottom: 1rem;
 }
 
@@ -29,7 +29,7 @@ label {
   display: block;
   margin-bottom: 0.5rem;
   font-weight: bold;
-  color: #555; /* Slightly lighter text for labels */
+  color: #333; /* Softer text color for readability */
 }
 
 input {
@@ -39,38 +39,47 @@ input {
   border: 1px solid #ccc;
   border-radius: 5px;
   font-size: 1rem;
+  background-color: #f4f4f9; /* Light background for inputs */
+  color: #333; /* Darker text for contrast */
 }
 
 input:focus {
-  border-color: #007bff; /* Blue border on focus */
+  border-color: #ff5e62; /* Match the Pomodoro app's primary color */
   outline: none;
-  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Subtle blue glow */
+  box-shadow: 0 0 5px rgba(255, 94, 98, 0.5); /* Add a subtle glow effect */
 }
 
 button {
   width: 100%;
   padding: 0.8rem;
-  background-color: #007bff; /* Primary blue color */
+  background: linear-gradient(
+    to right,
+    #ff5e62,
+    #ff9966
+  ); /* Gradient from the Pomodoro app */
   color: #fff;
   border: none;
   border-radius: 5px;
   font-size: 1rem;
+  font-weight: bold;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: transform 0.2s ease, opacity 0.3s ease;
 }
 
 button:hover {
-  background-color: #0056b3; /* Darker blue on hover */
+  transform: translateY(-2px); /* Slight lift effect */
+  opacity: 0.9;
 }
 
 .register-prompt {
   text-align: center;
   margin-top: 1rem;
   font-size: 0.9rem;
+  color: #333; /* Softer text color */
 }
 
 .register-prompt a {
-  color: #007bff; /* Link color matches the button */
+  color: #ff9966; /* Use the secondary color from the Pomodoro app */
   text-decoration: none;
 }
 
