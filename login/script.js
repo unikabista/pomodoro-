@@ -49,3 +49,17 @@ document.getElementById("googleSignInBtn").addEventListener("click", () => {
       alert("Error: " + error.message);
     });
 });
+
+// Handle Form Submission
+document.getElementById('loginForm').addEventListener('submit', function (event) {
+  event.preventDefault(); // Prevent form from refreshing the page
+
+  // Get the user's name
+  const userName = document.getElementById('login-name').value;
+
+  // Store the user's name in local storage
+  localStorage.setItem('userName', userName);
+
+  // Redirect to the home page
+  window.location.href = '../home/home.html'; // Adjust the path to your home page
+});

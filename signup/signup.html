@@ -1,33 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sign Up | Pomodoro</title>
-  <link rel="stylesheet" href="style.css" />
-  <script src="script.js" defer></script>
-</head>
-<body>
-  <main>
-    <div class="login-container">
-      <h2>Create Account</h2>
-      <form id="signupForm">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up | Pomodoro</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <main>
+      <div class="login-container">
+        <h2>Create Account</h2>
+        <form id="signupForm">
+          <label for="name">Name</label>
+          <input type="text" id="name" placeholder="Jane Doe" required />
 
-        <input type="text" id="name" placeholder="Jane Doe" required />
+          <label for="signup-email">Email</label>
+          <input
+            type="email"
+            id="signup-email"
+            placeholder="you@example.com"
+            required
+          />
 
-        <label for="email">Email</label>
-        <input type="email" id="signup-email" placeholder="you@example.com" required />
+          <label for="signup-password">Password</label>
+          <input
+            type="password"
+            id="signup-password"
+            placeholder="Enter password"
+            required
+          />
 
-        <label for="password">Password</label>
-        <input type="password" id="signup-password" placeholder="Enter password" required />
+          <label for="confirm-password">Confirm Password</label>
+          <input
+            type="password"
+            id="confirm-password"
+            placeholder="Re-enter password"
+            required
+          />
 
-        <label for="confirm-password">Confirm Password</label>
-        <input type="password" id="confirm-password" placeholder="Re-enter password" required />
-
-        <button type="submit" class="btn-login">Sign Up</button>
-      </form>
-      <p class="register-prompt">Already have an account? <a href="/login/login.html">Log in</a></p>
-    </div>
-  </main>
-</body>
+          <button type="submit" class="btn-login">Sign Up</button>
+        </form>
+        <p class="register-prompt">
+          Already have an account? <a href="/login/login.html">Log in</a>
+        </p>
+      </div>
+    </main>
+  </body>
 </html>
