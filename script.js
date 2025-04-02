@@ -165,3 +165,12 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 });
+
+// Get the username from the URL query parameters
+const params = new URLSearchParams(window.location.search);
+const username = params.get("username");
+
+// Display the welcome message
+if (username) {
+  document.getElementById("greeting").textContent = `Welcome ${username}`;
+}
