@@ -1,4 +1,48 @@
 document.addEventListener("DOMContentLoaded", function () {
+  // Check if user is logged in
+  const currentUser = JSON.parse(localStorage.getItem('currentUser'));
+  const authContainer = document.querySelector('.auth-container');
+  const greetingEl = document.getElementById('greeting');
+
+  if (currentUser) {
+    // User is logged in
+    // Add logout button
+    if (authContainer) {
+      authContainer.innerHTML = `
+        <button id="logoutBtn" class="auth-button logout-btn">Log Out</button>
+      `;
+      
+      // Add logout functionality
+      const logoutBtn = document.getElementById('logoutBtn');
+      if (logoutBtn) {
+        logoutBtn.addEventListener('click', function() {
+          localStorage.removeItem('currentUser');
+          window.location.reload();
+        });
+      }
+    }
+    
+    // Update greeting with user's first name
+    if (greetingEl) {
+      const firstName = currentUser.name.split(' ')[0];
+      greetingEl.textContent = `👋 Welcome, ${firstName}!`;
+    }
+  } else {
+    // User is not logged in
+    // Show login/signup buttons
+    if (authContainer) {
+      authContainer.innerHTML = `
+        <a href="/login/login.html" class="auth-button">Log In</a>
+        <a href="/signup/signup.html" class="auth-button">Sign Up</a>
+      `;
+    }
+    
+    // Clear greeting
+    if (greetingEl) {
+      greetingEl.textContent = '';
+    }
+  }
+
   // Timer durations in seconds
   const pomodoroDuration = 25 * 60; // 25 minutes
   const shortBreakDuration = 5 * 60; // 5 minutes
@@ -137,12 +181,6 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   updateSessionList();
-
-  const greetingEl = document.getElementById("greeting");
-  const storedUser = JSON.parse(localStorage.getItem("user"));
-  if (greetingEl && storedUser && storedUser.name) {
-    greetingEl.textContent = `👋 Welcome, ${storedUser.name}!`;
-  }
 
   const signupForm = document.getElementById("signupForm");
   if (signupForm) {

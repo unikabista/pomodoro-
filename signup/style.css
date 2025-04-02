@@ -52,11 +52,15 @@ input:focus {
 button {
   width: 100%;
   padding: 0.8rem;
+<<<<<<< HEAD
   background: linear-gradient(
     to right,
     #ff5e62,
     #ff9966
   ); /* Gradient from the Pomodoro app */
+=======
+  background-color: #ff5e62;
+>>>>>>> Unika
   color: #fff;
   border: none;
   border-radius: 5px;
@@ -67,8 +71,12 @@ button {
 }
 
 button:hover {
+<<<<<<< HEAD
   transform: translateY(-2px); /* Slight lift effect */
   opacity: 0.9;
+=======
+  background-color: #ff4b4f;
+>>>>>>> Unika
 }
 
 .register-prompt {
@@ -79,7 +87,11 @@ button:hover {
 }
 
 .register-prompt a {
+<<<<<<< HEAD
   color: #ff9966; /* Use the secondary color from the Pomodoro app */
+=======
+  color: #ff5e62;
+>>>>>>> Unika
   text-decoration: none;
 }
 
