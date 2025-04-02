@@ -1,51 +1,42 @@
-import { initializeApp } from "firebase/app";
-import { getAuth, signInWithEmailAndPassword, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
+document.addEventListener('DOMContentLoaded', function() {
+    const loginForm = document.getElementById('loginForm');
+    const googleSignInBtn = document.getElementById('googleSignInBtn');
 
-// Firebase configuration
-const firebaseConfig = {
-  apiKey: "AIzaSyC0efDsBW7fqjNUGRQId0CCYRAsqNOn15Q",
-  authDomain: "pomodoro-d2df9.firebaseapp.com",
-  projectId: "pomodoro-d2df9",
-  storageBucket: "pomodoro-d2df9.firebasestorage.app",
-  messagingSenderId: "546380577610",
-  appId: "1:546380577610:web:f6cb3a437082624ece1fb3",
-  measurementId: "G-HLLFNJBDWN"
-};
+    // Check if user is already logged in
+    const currentUser = JSON.parse(localStorage.getItem('currentUser'));
+    if (currentUser) {
+        window.location.href = '../index.html';
+        return;
+    }
 
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
-const auth = getAuth(app);
+    loginForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        const email = document.getElementById('login-email').value;
+        const password = document.getElementById('login-password').value;
 
-// Handle Email Sign-In
-document.getElementById("loginForm").addEventListener("submit", (event) => {
-  event.preventDefault();
+        // Get users from localStorage
+        const users = JSON.parse(localStorage.getItem('users')) || [];
+        
+        // Find user with matching email and password
+        const user = users.find(u => u.email === email && u.password === password);
 
-  const email = document.getElementById("login-email").value;
-  const password = document.getElementById("login-password").value;
-
-  signInWithEmailAndPassword(auth, email, password)
-    .then((userCredential) => {
-      // Signed in
-      const user = userCredential.user;
-      alert(`Welcome ${user.email}`);
-      window.location.href = "../index.html?username=" + encodeURIComponent(user.email.split("@")[0]);
-    })
-    .catch((error) => {
-      alert("Error: " + error.message);
+        if (user) {
+            // Store current user info in localStorage
+            localStorage.setItem('currentUser', JSON.stringify({
+                name: user.name,
+                email: user.email
+            }));
+            
+            // Redirect to main page
+            window.location.href = '../index.html';
+        } else {
+            alert('Invalid email or password');
+        }
     });
-});
 
-// Handle Google Sign-In
-document.getElementById("googleSignInBtn").addEventListener("click", () => {
-  const provider = new GoogleAuthProvider();
-
-  signInWithPopup(auth, provider)
-    .then((result) => {
-      const user = result.user;
-      alert(`Welcome ${user.displayName}`);
-      window.location.href = "../index.html?username=" + encodeURIComponent(user.displayName);
-    })
-    .catch((error) => {
-      alert("Error: " + error.message);
+    // Google Sign In functionality can be added here later
+    googleSignInBtn.addEventListener('click', function() {
+        alert('Google Sign In will be implemented soon!');
     });
 });

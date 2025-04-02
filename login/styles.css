@@ -50,7 +50,7 @@ body {
   button {
     width: 100%;
     padding: 0.8rem;
-    background-color: #007bff;
+    background-color: #ff5e62;
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -60,7 +60,7 @@ body {
   }
   
   button:hover {
-    background-color: #0056b3;
+    background-color: #ff4b4f;
   }
   
   .register-prompt {
@@ -70,7 +70,7 @@ body {
   }
   
   .register-prompt a {
-    color: #007bff;
+    color: #ff5e62;
     text-decoration: none;
   }
   
@@ -81,7 +81,7 @@ body {
   .google-signin-btn {
     width: 100%;
     padding: 0.8rem;
-    background-color: #4285f4;
+    background-color: #ff5e62;
     color: white;
     border: none;
     border-radius: 5px;
@@ -91,5 +91,5 @@ body {
   }
   
   .google-signin-btn:hover {
-    background-color: #357ae8;
+    background-color: #ff4b4f;
   }

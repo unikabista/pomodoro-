@@ -71,7 +71,7 @@ nav ul li:hover {
 }
 
 .auth-button {
-  background: linear-gradient(to right, #ff5e62, #ff9966);
+  background: #ff5e62;
   padding: 0.6rem 1.2rem;
   border-radius: 3rem;
   color: #fff;
@@ -80,6 +80,22 @@ nav ul li:hover {
 }
 
 .auth-button:hover {
+  opacity: 0.8;
+}
+
+.auth-button.logout-btn {
+  background: #ff5e62;
+  padding: 0.6rem 1.2rem;
+  border-radius: 3rem;
+  color: #fff;
+  font-weight: 600;
+  transition: opacity 0.3s ease;
+  cursor: pointer;
+  border: none;
+  font-family: inherit;
+}
+
+.auth-button.logout-btn:hover {
   opacity: 0.8;
 }
 

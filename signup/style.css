@@ -50,7 +50,7 @@ input:focus {
 button {
   width: 100%;
   padding: 0.8rem;
-  background-color: #007bff; /* Primary blue color */
+  background-color: #ff5e62;
   color: #fff;
   border: none;
   border-radius: 5px;
@@ -60,7 +60,7 @@ button {
 }
 
 button:hover {
-  background-color: #0056b3; /* Darker blue on hover */
+  background-color: #ff4b4f;
 }
 
 .register-prompt {
@@ -70,7 +70,7 @@ button:hover {
 }
 
 .register-prompt a {
-  color: #007bff; /* Link color matches the button */
+  color: #ff5e62;
   text-decoration: none;
 }
 
