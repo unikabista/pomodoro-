@@ -171,20 +171,23 @@ main {
 }
 
 #timerDisplay {
-  font-size: 1.5rem;
-  color: #333;
+  font-size: 2rem;
+  color: rgb(14, 13, 13);
   font-weight: 600;
   text-transform: uppercase;
   text-align: center;
+  font-weight: bold;
+  position: relative;
+  z-index: 1;
 }
 
 .timer-pointer {
   position: absolute;
-  width: 4px;
-  height: 95px;
+  width: 3.9px;
+  height: 91px;
   background: #ff5e62;
-  top: 45px; /* moves pointer up near the top */
-  left: 50%;
+  top: 49.2px; /* moves pointer up near the top */
+  left: 49.5%;
   transform: translateX(-50%) rotate(0deg);
   transform-origin: bottom center;
   border-radius: 2px;

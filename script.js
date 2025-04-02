@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
   function updateTimerDisplay(seconds) {
     const minutes = Math.floor(seconds / 60);
     const remainingSeconds = seconds % 60;
-    timerDisplay.textContent = `${minutes.toString().padStart(2, "0")}:${remainingSeconds
+    timerDisplay.textContent = `${minutes.toString().padStart(2, "0")} ${remainingSeconds
       .toString()
       .padStart(2, "0")}`;
   }
