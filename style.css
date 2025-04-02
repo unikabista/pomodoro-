@@ -49,6 +49,17 @@ header {
   margin-right: 2rem;
 }
 
+
+
+/* Style for the logo text */
+.logo {
+  font-size: 1.5rem; /* Adjust the font size */
+  font-weight: 700; /* Make the text bold */
+  color: #fff; /* Ensure the text color is white */
+  display: flex;
+  align-items: center; /* Align text vertically with the logo */
+}
+
 nav ul {
   list-style: none;
   display: flex;

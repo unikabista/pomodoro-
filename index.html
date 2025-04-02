@@ -53,15 +53,17 @@
           <div class="timer-center-label" id="timerDisplay">25:00</div>
         </div>
 
+        <audio id="timerSound" src="alarm.mp3" preload="auto"></audio>
+
         <h2 class="technique-title">The Pomodoro Technique</h2>
 
-        <button class="btn-cta">Get Started</button>
+        <button class="btn-cta" onclick="scrollToSamaya()">Learn More</button>
 
         <section class="about-pomodoro">
           <div class="about-container">
-            <h2>What is Pomodoro?</h2>
+            <h2 id="whatIsSamaya">What is Samaya?</h2>
             <p>
-              Pomodoro is a customizable pomodoro timer that works on desktop &
+              Samaya is a customizable pomodoro timer that works on desktop &
               mobile browsers. The aim of this app is to help you focus on any
               task you are working on, such as study, writing, or coding. This
               app is inspired by the Pomodoro Technique, a time management
@@ -92,20 +94,24 @@
             <h2>Basic Features</h2>
             <ul>
               <li>
-                <strong>Estimate Finish Time:</strong> Get an estimate of the
-                time required to complete your daily tasks.
+                <strong>Track Your Focus Time:</strong> Monitor how much time
+                you spend on tasks using the Pomodoro technique.
               </li>
               <li>
-                <strong>Add Templates:</strong> Save your repetitive tasks as
-                templates and add them with just one click.
+                <strong>Customizable Timers:</strong> Adjust focus and break
+                durations to suit your workflow and preferences.
               </li>
               <li>
-                <strong>Visual Reports:</strong> See how much time you've
-                focused each day, week, and month.
+                <strong>Task Management:</strong> Add, organize, and prioritize
+                tasks to stay on top of your goals.
               </li>
               <li>
-                <strong>Custom Settings:</strong> Personalize your focus/break
-                time, alarm sounds, background sounds, and more.
+                <strong>Progress Insights:</strong> View detailed reports of
+                your completed Pomodoros and productivity trends.
+              </li>
+              <li>
+                <strong>Notifications & Sounds:</strong> Get notified when it's
+                time to focus or take a break with customizable alerts.
               </li>
             </ul>
           </div>

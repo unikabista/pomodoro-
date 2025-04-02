@@ -13,23 +13,27 @@ body {
 .login-container {
   background: #ffffff;
   padding: 2rem;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Slightly stronger shadow for consistency */
+  border-radius: 15px; /* Rounded corners for a modern look */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Stronger shadow for depth */
   width: 100%;
   max-width: 400px;
+  text-align: center; /* Center-align content */
 }
 
 h2 {
   text-align: center;
   color: #ff5e62; /* Use the Pomodoro app's primary color */
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+  font-weight: bold;
 }
 
 label {
   display: block;
   margin-bottom: 0.5rem;
   font-weight: bold;
-  color: rgb(60, 59, 59); /* Softer text color for readability */
+  color: #333; /* Softer text color for readability */
+  text-align: left; /* Align labels to the left */
 }
 
 input {
@@ -37,16 +41,17 @@ input {
   padding: 0.8rem;
   margin-bottom: 1rem;
   border: 1px solid #ccc;
-  border-radius: 5px;
+  border-radius: 8px; /* Rounded corners for inputs */
   font-size: 1rem;
-  background-color: #f4f4f9; /* Light background for inputs */
+  background-color: #f9f9f9; /* Light background for inputs */
   color: #333; /* Darker text for contrast */
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 input:focus {
-  border-color: #ff5e62; /* Match the Pomodoro app's primary color */
+  border-color: #ff5e62; /* Highlight border with primary color */
   outline: none;
-  box-shadow: 0 0 5px rgba(255, 94, 98, 0.5); /* Add a subtle glow effect */
+  box-shadow: 0 0 8px rgba(255, 94, 98, 0.5); /* Add a subtle glow effect */
 }
 
 button {
@@ -59,10 +64,11 @@ button {
   ); /* Gradient from the Pomodoro app */
   color: #fff;
   border: none;
-  border-radius: 5px;
+  border-radius: 8px; /* Rounded corners for buttons */
   font-size: 1rem;
+  font-weight: bold;
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  transition: transform 0.2s ease, opacity 0.3s ease;
 }
 
 button:hover {
@@ -87,17 +93,23 @@ button:hover {
 }
 
 .google-signin-btn {
-  width: 100%;
-  padding: 0.8rem;
-  background-color: #4285f4; /* Keep Google's branding color */
-  color: white;
-  border: none;
-  border-radius: 5px;
-  font-size: 1rem;
-  cursor: pointer;
   margin-top: 1rem;
+  background: linear-gradient(
+    to right,
+    #ff5e62,
+    #ff9966
+  ); /* Gradient for consistency */
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 0.8rem;
+  transition: transform 0.2s ease, opacity 0.3s ease;
 }
 
 .google-signin-btn:hover {
-  background-color: #357ae8;
+  transform: translateY(-2px);
+  opacity: 0.9;
 }

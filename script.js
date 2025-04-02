@@ -11,17 +11,17 @@ document.addEventListener("DOMContentLoaded", function () {
       authContainer.innerHTML = `
         <button id="logoutBtn" class="auth-button logout-btn">Log Out</button>
       `;
-      
+
       // Add logout functionality
       const logoutBtn = document.getElementById('logoutBtn');
       if (logoutBtn) {
-        logoutBtn.addEventListener('click', function() {
+        logoutBtn.addEventListener('click', function () {
           localStorage.removeItem('currentUser');
           window.location.reload();
         });
       }
     }
-    
+
     // Update greeting with user's first name
     if (greetingEl) {
       const firstName = currentUser.name.split(' ')[0];
@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function () {
         <a href="/signup/signup.html" class="auth-button">Sign Up</a>
       `;
     }
-    
+
     // Clear greeting
     if (greetingEl) {
       greetingEl.textContent = '';
@@ -62,6 +62,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const pauseTimerBtn = document.getElementById("pauseTimerBtn");
   const resetTimerBtn = document.getElementById("resetTimerBtn");
   const timeInput = document.getElementById("timeInput");
+  const timerSound = document.getElementById('timerSound');
 
   // Update Timer Display
   function updateTimerDisplay(seconds) {
@@ -100,6 +101,7 @@ document.addEventListener("DOMContentLoaded", function () {
           timerInterval = null;
           timerDisplay.textContent = "DONE";
           alert("Time's up!");
+          timerSound.play();
         }
       }
     }, 1000);
@@ -211,4 +213,9 @@ const username = params.get("username");
 // Display the welcome message
 if (username) {
   document.getElementById("greeting").textContent = `Welcome ${username}`;
+}
+
+function scrollToSamaya() {
+  const samayaSection = document.getElementById('whatIsSamaya');
+  samayaSection.scrollIntoView({ behavior: 'smooth' });
 }
